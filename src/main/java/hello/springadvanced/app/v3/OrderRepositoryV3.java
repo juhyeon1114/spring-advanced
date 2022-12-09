@@ -1,7 +1,7 @@
 package hello.springadvanced.app.v3;
 
 import hello.springadvanced.trace.TraceStatus;
-import hello.springadvanced.trace.logtrace.FieldLogTrace;
+import hello.springadvanced.trace.logtrace.LogTrace;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 public class OrderRepositoryV3 {
 
-    private final FieldLogTrace trace;
+    private final LogTrace trace;
 
     public void save(String itemId) {
 

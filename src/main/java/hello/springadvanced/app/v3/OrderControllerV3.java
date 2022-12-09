@@ -1,7 +1,7 @@
 package hello.springadvanced.app.v3;
 
 import hello.springadvanced.trace.TraceStatus;
-import hello.springadvanced.trace.logtrace.FieldLogTrace;
+import hello.springadvanced.trace.logtrace.LogTrace;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderControllerV3 {
 
     private final OrderServiceV3 orderService;
-    private final FieldLogTrace trace;
+    private final LogTrace trace;
 
     @GetMapping("/v3/request")
     public String request(String itemId) {
