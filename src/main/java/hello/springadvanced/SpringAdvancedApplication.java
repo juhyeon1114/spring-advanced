@@ -2,6 +2,7 @@ package hello.springadvanced;
 
 import hello.springadvanced.config.AppV1Config;
 import hello.springadvanced.config.AppV2Config;
+import hello.springadvanced.config.v1_proxy.ConcreteProxyConfig;
 import hello.springadvanced.config.v1_proxy.InterfaceProxyConfig;
 import hello.springadvanced.trace.logtrace.LogTrace;
 import hello.springadvanced.trace.logtrace.ThreadLocalLogTrace;
@@ -10,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
-@Import(InterfaceProxyConfig.class)
+@Import(ConcreteProxyConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.springadvanced.app")
 public class SpringAdvancedApplication {
 
@@ -24,6 +25,5 @@ public class SpringAdvancedApplication {
 	public LogTrace logTrace() {
 		return new ThreadLocalLogTrace();
 	}
-
 
 }
